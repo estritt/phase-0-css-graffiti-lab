@@ -1,1 +1,29 @@
-/* write your override styles here */
+#wall .tag-1 {
+    display: none;
+}
+
+div#wall #tag-2 {
+    display: none;
+}
+
+/* I first tried div#wall div[id="tag-3"][class="slick wicked"] and realized that using the id that way only gives it specificity 
+points as if it were another type specificiation like p,h1, or ::before (+0,0,0,1 instead of +0,1,0,0) */
+div#wall div#tag-3[class="slick wicked"] {
+    display: none;
+}
+
+div#wall div.parent #tag-4 {
+    display: none;
+}
+
+div#wall div.parent div#tag-5.slick {
+    display: none;
+}
+
+div#wall div.parent div:last-child div:last-child#tag-6 {
+    display: none;
+}
+
+body div#wall div.parent div > #tag-7.slick:last-child {
+    display: none;
+}
